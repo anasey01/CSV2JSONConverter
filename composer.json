@@ -1,0 +1,19 @@
+{
+    "name": "anasey/csv2json-converter",
+    "description": "A CSV to JSON Converter application",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oluseyi Anani",
+            "email": "anasey@outlook.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require-dev": {
+        "spatie/ray": "^1.21"
+    }
+}
