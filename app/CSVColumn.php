@@ -7,8 +7,19 @@ namespace App;
 abstract Class CSVColumn
 {
 
-    abstract public function extractData($stream);
+    /**
+     * Methods for ColumnClasses to implement
+     * @param $stream
+     * @return mixed
+     */
+    abstract public function extractData($stream): mixed;
 
+    /**
+     * Fetches data from the stream
+     * @param $stream
+     * @param $colPosition
+     * @return array
+     */
     public function fetchData($stream, $colPosition): array
     {
         $csvRawData = array();
@@ -21,6 +32,11 @@ abstract Class CSVColumn
         return $csvRawData;
     }
 
+    /**
+     * Formats fetched data
+     * @param array $rawData
+     * @return array
+     */
     public function formatData(array $rawData): array
     {
         $total = count($rawData);
